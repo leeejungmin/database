@@ -1,0 +1,26 @@
+$sql="SELECT Lastname,Age FROM Persons ORDER BY Lastname";
+$result=mysqli_query($con,$sql);
+
+$row=mysqli_fetch_array($result,MYSQLI_NUM);
+
+"<li><a href=\"?id={$epoc['id']}\">" ¹«½¼ ÀÇ¹Ì¾ß
+
+  <?php
+$epoc=mysqli_fetch_array($list_result);
+
+echo'<li>' .'id is like that===='. $epoc['title']. '</li>';
+?>
+
+<!-- <ul>
+  <?php
+  while($epoc=mysqli_fetch_array($list_result)){
+
+    echo'<li>' .'id is like that===='. $epoc['title']. '</li>';
+  }
+
+
+
+
+exit;
+?>
+</ul> -->

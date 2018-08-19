@@ -1,0 +1,44 @@
+jquery는 모든 값을 레퍼로 리턴한다.
+
+mysql L:\WAMP\mysql\bin 에서
+
+mysql -uroot -p111111 -hlocalhost
+
+CREATE DATABASE opentutorials CHARACTER SET utf8 COLLATE utf8_general_ci;
+
+show databases;
+use opentutorials
+
+create table topic(
+    -> id int(11) NOT NULL AUTO_INCREMENT,
+    -> title varchar(255) NOT NULL,
+    -> description text NULL,(없을 수도 있따.)
+    -> created datetime NOT NULL,(꼭 있어야한다)
+    -> PRIMARY KEY(id)
+    -> );
+
+desc topic;(테이블을 본다)
+
+insert into topic (title, description, created) VALUES('html','html이란 무엇인가?', now());
+
+select * from topic;(다보기)
+select  id title description from topic;
+
+select * from topic where id=2;
+
+update topic set title='cascading', description='아름다운' where id=2;(id는 자동으로 추가됨 auto때문)
+
+delete from topic where id = 2;
+
+REACT NATIVE
+
+나는 해냈다.!!!!!!!!!!!!!!
+
+
+<ul>
+  <?php
+  while($row = mysqli_fetch_array($list_result)){
+    echo '<li>'. $row['title'].'</li>';
+  } ?>
+</ul>
+exit;
